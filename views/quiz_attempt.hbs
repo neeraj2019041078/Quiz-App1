@@ -1,0 +1,77 @@
+  <form method="post">
+    
+    <div class="at-quiz" id="add-ques">
+
+
+    </div>
+
+    <button class="btn waves-effect waves-light center" type="submit">Submit<i class="material-icons done"></i></button>
+
+  </form>
+
+
+<script>
+ const obj=`{{{quiz_data}}}`;
+ const quiz=JSON.parse(obj);
+ var count=1;
+ const quiz_content=document.getElementById('add-ques');
+ quiz.questions.forEach(question=>{
+  let node=document.createElement('div');
+  node.className="question_container";
+  node.innerHTML=`<div class="question_container">
+
+        <div class="quiz_question">
+          <h5>${count}. ${question.ques}</h5>
+        </div>
+
+        <div class="options">
+
+          <div>
+
+            <div class="optn">
+              <label>
+                <input name="q${count}" value="o1" type="radio" />
+                <span>${question.option_1}</span>
+              </label>
+            </div>
+
+            <div class="optn">
+
+              <label>
+                <input name="q${count}" value="o2" type="radio" />
+                <span>${question.option_2}</span>
+              </label>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <div class="optn">
+              <label>
+                <input name="q${count}" value="o3" type="radio" />
+                <span>${question.option_3}</span>
+              </label>
+            </div>
+
+            <div class="optn">
+
+              <label>
+                <input name="q${count}" value="o4" type="radio" />
+                <span>${question.option_4}</span>
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>`;
+      quiz_content.append(node);
+      count++;
+
+
+ })
+
+</script>

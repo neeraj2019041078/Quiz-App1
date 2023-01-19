@@ -1,0 +1,13 @@
+<div class="row">
+    {{#each quiz_data}}
+    <div class="col s12 m6">
+        <div class="card #1b5e20 green darken-4">
+            <div class="card-content white-text">
+                <span class="card-title"> <blockquote>{{{quiz_name}}}</blockquote></span>
+                 <p class="">Your Score In The Quiz is {{{score}}} %</p>
+                 <p>{{{time}}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

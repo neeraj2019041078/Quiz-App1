@@ -1,0 +1,65 @@
+<h4><center>Create Quiz</center></h4>
+
+<div class="form">
+    <form action="/newquiz" method="post">
+     <div class="input-field col s6">
+          <input id="first_name" type="text"  required  class="validate" name="quiz_name">
+          <label for="first_name">Name of the Quiz</label>
+    </div>
+    
+    <div id="ques">
+
+    <div class="question">
+    
+    <!-- Question -->
+
+    <div class="input-field col s6">
+        <input id="q1" type="text"  required  class="validate" name="q1">
+        <label for="q1"><b>Question 1</b></label>
+    </div>
+    
+    <!-- Option 1&2 --> 
+
+    <div class="row">
+    <div class="input-field col s6">
+        <input id="q1o1" type="text"  required  class="validate" name="q1o1">
+        <label for="q1o1">Option 1</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="q1o2" type="text"  required  class="validate" name="q1o2">
+        <label for="q1o2">Option 2</label>
+    </div>
+    </div>
+    
+    <!-- Option 3&4 --> 
+    <div class="row">
+    <div class="input-field col s6">
+        <input id="q1o3" type="text"  required  class="validate" name="q1o3">
+        <label for="q1o3">Option 3</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="q1o4" type="text"  required  class="validate" name="q1o4">
+        <label for="q1o4">Option 4</label>
+    </div>
+    </div>
+
+    <!-- Ans -->
+
+    <div class="input-field col s6">
+        <input id="ans1" type="text"  required  class="validate" name="ans1">
+        <label for="ans1">Answer</label>
+    </div>
+
+    </div>
+
+    </div>
+    <div class="row">
+    <button type="button" id="add-ques"class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></button>
+    <button class="btn waves-effect waves-light center" type="submit" >Submit<i class="material-icons done"></i></button>
+    </div>
+    </form>
+    <br>
+
+</div>
+
+<script src="/js/quiz.js"></script>
