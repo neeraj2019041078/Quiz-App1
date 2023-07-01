@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 
 const connectDB=async ()=>{
     try{
-        const conn=await mongoose.connect("mongodb+srv://neerajv21:Neeraj123@cluster0.mzzhghr.mongodb.net/quiz?retryWrites=true&w=majority",{
+        const conn=await mongoose.connect("mongodb://localhost:27017/quiz",{
             useNewUrlParser:true,
             useUnifiedTopology:true
         });
