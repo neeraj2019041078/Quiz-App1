@@ -46,7 +46,7 @@ if (process.env.NODE_ENV == "devlopment") app.use(morgan("dev"));
 
 app.use(
   session({
-    store: MongoStore.create({ mongoUrl:"mongodb://localhost:27017/quiz" }),
+    store: MongoStore.create({ mongoUrl:process.env.MONGO_URL}),
     secret: "Top Secret",
     resave: false,
     saveUninitialized: false,
